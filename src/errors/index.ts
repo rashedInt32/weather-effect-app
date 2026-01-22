@@ -1,5 +1,4 @@
 import { Schema } from "effect";
-import { extend } from "effect/Scope";
 
 export class NetworkEerror extends Schema.TaggedError<NetworkEerror>()(
   "NetworkEerror",

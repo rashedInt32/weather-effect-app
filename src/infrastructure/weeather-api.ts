@@ -142,7 +142,7 @@ export const makeWeatherApi = (config: WeatherApiConfigType) => {
           const resetAt = new Date(Date.now() + 60000);
           const retryAfter = response.headers.get("Retry-After");
 
-          return RateLimitError.make({
+          return yield* RateLimitError.make({
             limit: config.maxRequestsPerMinute,
             remaining: 0,
             resetAt,

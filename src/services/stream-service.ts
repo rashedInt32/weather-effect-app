@@ -1,4 +1,4 @@
-import { Context, Duration, Effect, Schedule, Stream } from "effect";
+import { Context, Duration, Effect, Layer, Schedule, Stream } from "effect";
 import { StreamConfig, StreamConfigtype } from "src/domain/config.js";
 import { WeatherReading, Location } from "src/domain/models.js";
 import { WeatherService } from "src/services/weather-service.js";
@@ -27,22 +27,25 @@ export const makeStreamService = Effect.gen(function* () {
     never,
     WeatherService
   > =>
-    Stream.fromSchedule(
-      Schedule.fixed(Duration.seconds(config.pullIntervalSeconds)),
+    Stream.repeat(
+      Effect.gen(function* () {
+        const locations = yield* weatherService.getTrackedLocations();
+        const readings = yield* Effect.forEach(
+          locations,
+          (location: Location) =>
+            weatherService
+              .getCurrentWeather(location)
+              .pipe(Effect.catchAll(() => Effect.succeed(null))),
+          { concurrency: config.maxConcurrentLocation },
+        );
+
+        return readings.filter(
+          (reading): reading is WeatherReading => reading !== null,
+        );
+      }),
+      Schedule.spaced(Duration.seconds(config.pullIntervalSeconds))
     ).pipe(
-      Stream.flatMap(() => weatherService.getTrackedLocations()),
-      Stream.flatMap((locations) =>
-        Stream.fromIterable(locations as Location[]),
-      ),
-      Stream.mapEffect(
-        (location: Location) =>
-          weatherService
-            .getCurrentWeather(location)
-            .pipe(Effect.catchAll(() => Effect.succeed(null))),
-        { concurrency: config.maxConcurrentLocation },
-      ),
-      Stream.filter((reading): reading is WeatherReading => reading !== null),
-      Stream.buffer({ capacity: config.bufferSize }),
+      Stream.flatMap((readings) => Stream.fromIterable(readings)),
     );
 
   const locationWeatherUpdates = (
@@ -86,3 +89,5 @@ export const makeStreamService = Effect.gen(function* () {
     multiLocationWeatherUpdates,
   });
 });
+
+export const StreamServiceLive = Layer.effect(StreamService, makeStreamService);

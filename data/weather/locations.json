@@ -1,0 +1,623 @@
+[
+  {
+    "id": "loc-olnozq3x3b",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-v4yt2n4bm3",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-faqzsgoc7z",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-3y514eyfp3s",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-q7uyf2ix4wl",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-p8mqnw23t",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-a6zkuv0wbxn",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-8zm8pz9xcck",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-cx3q6lweh0d",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-66hdzoabpb8",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-iqe9gfrcds",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-m8j1fx24fgf",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-ux6gjbhecw",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-1hwibq8zo1r",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-y3vv5eb57u",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-27ocyfid8os",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-qajfsms1e8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-m3hlb3h2mkr",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-7g5vzgsc1b",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-gpelbz4yocu",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-8yz4lya7awk",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-4jgzoly09cd",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-9b2gnm8j8hq",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-y8dldk7eg",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-sbfghi18zbs",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-ns0xbskmpy8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-tee3eccgp6",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-f7px9wc51nn",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-94uaa81k3ya",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-jiqjq862g4",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-ynacmaya1h",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-pe23m0p2et",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-wfajjfr9tu",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-sfc2nij9reh",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-3tptovvrwu7",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-th24l7fpey",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-9u30jra78l",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-jfsqlzi30n8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-265kx9ptcqw",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-1g8hqidrun",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-7633bmzo8n8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-t556u9iz3ic",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-rpecrlzz1aq",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-6t02sxmawq9",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-y06hdkndes",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-tkz4wntb8u9",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-gh501j6ht7l",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-m9kerfeki7l",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-d96ko552y",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-5cci1fzv8mh",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-tt0c0lpezq",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-qtev1ez0bq",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-n6v0me8h1x8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-gocesc4v9ss",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-kebhz9dr7rl",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-g2g9rhuyfp7",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-2a51f773x2s",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-lpli0roelh",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-qhsacd6qzqp",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-gimhhuvpoph",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-yvwcl9ojqx",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-j62iadd8wl8",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-m0t0jmc69p7",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-ci8wxnmw5nc",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-j62r7mro54h",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-wjd3l3lmxzk",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  },
+  {
+    "id": "loc-8alihrbbif",
+    "name": "New York",
+    "country": "US",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    }
+  },
+  {
+    "id": "loc-wdcij1m62da",
+    "name": "London",
+    "country": "GB",
+    "coordinates": {
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    }
+  },
+  {
+    "id": "loc-6wheayeqsup",
+    "name": "Tokyo",
+    "country": "JP",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    }
+  }
+]

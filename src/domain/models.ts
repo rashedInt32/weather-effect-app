@@ -99,13 +99,6 @@ export class WeatherReading extends Schema.Class<WeatherReading>(
       }),
     ),
   ),
-  visibility: Schema.optional(
-    Schema.Number.pipe(
-      Schema.greaterThanOrEqualTo(0, {
-        message: () => "Visibility must be greater than or equal to 0",
-      }),
-    ),
-  ),
   timestamp: Schema.Date,
 }) {}
 
@@ -154,7 +147,6 @@ export const createWeatherReading = (params: {
   windDirection?: number;
   precipitation?: number;
   pressure?: number;
-  visibility?: number;
 }): WeatherReading =>
   new WeatherReading({
     id: WeatherReadingId.make(`read-${Math.random().toString(36).slice(2)}`),

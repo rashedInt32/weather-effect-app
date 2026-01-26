@@ -14,35 +14,26 @@ import {
 } from "src/errors/index.js";
 
 const OpenWeatherMapResponse = Schema.Struct({
-  coord: Schema.Struct({
+  location: Schema.Struct({
+    name: Schema.String,
+    country: Schema.String,
     lon: Schema.Number,
     lat: Schema.Number,
   }),
-  weather: Schema.Array(
-    Schema.Struct({
-      id: Schema.Number,
-      main: Schema.String,
-      description: Schema.String,
-    }),
-  ),
-  main: Schema.Struct({
-    temp: Schema.Number,
-    feels_like: Schema.Number,
+  current: Schema.Struct({
+    temp_c: Schema.Number,
+    wind_kph: Schema.Number,
+    wind_degree: Schema.Number,
+    pressure_mb: Schema.Number,
+    precip_in: Schema.Number,
     humidity: Schema.Number,
-    pressure: Schema.optional(Schema.Number),
-  }),
-  visibility: Schema.optional(Schema.Number),
-  wind: Schema.Struct({
-    speed: Schema.Number,
-    deg: Schema.optional(Schema.Number),
-  }),
-  rain: Schema.optional(
-    Schema.Struct({
-      "1h": Schema.optional(Schema.Number),
+    feelslike_c: Schema.Number,
+    condition: Schema.Struct({
+      text: Schema.String,
+      icon: Schema.String,
+      code: Schema.Number,
     }),
-  ),
-  name: Schema.String,
-  dt: Schema.Number,
+  }),
 });
 
 type OpenWeatherMapResponse = typeof OpenWeatherMapResponse.Type;
@@ -60,21 +51,20 @@ const transformResponse = (
   response: OpenWeatherMapResponse,
   location: Location,
 ): WeatherReading => {
-  const tempCelsius = response.main.temp - 273.15;
-  const feelsLikeCelsius = response.main.feels_like - 273.15;
-  const condition = mapWeatherCondition(response.weather[0]?.id ?? 800);
+  const tempCelsius = response.current.temp_c;
+  const feelsLikeCelsius = response.current.feelslike_c;
+  const condition = mapWeatherCondition(response.current.condition.code ?? 800);
 
   return createWeatherReading({
     location,
     temperature: tempCelsius,
     feelsLike: feelsLikeCelsius,
-    humidity: response.main.humidity,
+    humidity: response.current.humidity,
     condition,
-    windSpeed: response.wind.speed,
-    windDirection: response.wind.deg ?? 180,
-    precipitation: response.rain?.["1h"] ?? 0,
-    pressure: response.main.pressure ?? 1015,
-    visibility: response.visibility ?? 1000,
+    windSpeed: response.current.wind_kph,
+    windDirection: response.current.wind_degree ?? 180,
+    precipitation: response.current.precip_in ?? 0,
+    pressure: response.current.pressuere_md ?? 1015,
   });
 };
 
@@ -106,19 +96,22 @@ export const makeWeatherApi = (config: WeatherApiConfigType) => {
     | TimeoutError
   > =>
     Effect.gen(function* () {
-      const url = new URL(`${config.baseUrl}/weather`);
-      url.searchParams.set("lat", location.coordinates.latitude.toString());
-      url.searchParams.set("lon", location.coordinates.longitude.toString());
-      url.searchParams.set("appid", config.apiKey);
+      const url = new URL(
+        `${config.baseUrl}key=${config.apiKey}&q=${location.name}`,
+      );
+      // url.searchParams.set("lat", location.coordinates.latitude.toString());
+      // url.searchParams.set("lon", location.coordinates.longitude.toString());
+      // url.searchParams.set("appid", config.apiKey);
 
       const response = yield* Effect.tryPromise({
         try: () => fetch(url.toString()),
-        catch: (error) =>
-          NetworkEerror.make({
+        catch: (error) => {
+          return NetworkEerror.make({
             url: url.toString(),
             operation: "Fetch",
             cause: error,
-          }),
+          });
+        },
       }).pipe(
         Effect.timeout(`${config.timeoutMs} millis`),
         Effect.mapError((maybeTimeout) => {
@@ -163,27 +156,29 @@ export const makeWeatherApi = (config: WeatherApiConfigType) => {
 
       const json = yield* Effect.tryPromise({
         try: () => response.json(),
-        catch: (error) =>
-          InvalidResponseError.make({
+        catch: (error) => {
+          return InvalidResponseError.make({
             url: url.toString(),
             expectedSchema: "OpenWeatherMapResponse",
             responseBody: "Failed to parse JSON",
             parseError: error,
-          }),
+          });
+        },
       });
 
       const validated = yield* Schema.decode(OpenWeatherMapResponse)(json).pipe(
-        Effect.mapError((parseError) =>
-          InvalidResponseError.make({
+        Effect.mapError((parseError) => {
+          return InvalidResponseError.make({
             url: url.toString(),
             expectedSchema: "OpenWeatherMapResponse",
             responseBody: JSON.stringify(json),
             parseError,
-          }),
-        ),
+          });
+        }),
       );
 
-      return transformResponse(validated, location);
+      const result = transformResponse(validated, location);
+      return result;
     });
 
   return WeatherApi.of({

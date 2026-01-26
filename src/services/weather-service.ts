@@ -1,4 +1,4 @@
-import { Context, Effect, Effectable, Layer } from "effect";
+import { Context, Effect, Layer } from "effect";
 import { Location, WeatherReading } from "src/domain/models.js";
 import {
   HttpError,

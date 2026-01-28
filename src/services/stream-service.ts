@@ -43,10 +43,8 @@ export const makeStreamService = Effect.gen(function* () {
           (reading): reading is WeatherReading => reading !== null,
         );
       }),
-      Schedule.spaced(Duration.seconds(config.pullIntervalSeconds))
-    ).pipe(
-      Stream.flatMap((readings) => Stream.fromIterable(readings)),
-    );
+      Schedule.spaced(Duration.seconds(config.pullIntervalSeconds)),
+    ).pipe(Stream.flatMap((readings) => Stream.fromIterable(readings)));
 
   const locationWeatherUpdates = (
     locationId: string,
